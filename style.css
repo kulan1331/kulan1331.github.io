@@ -25,19 +25,18 @@ a {
     font-size: 50px;
 }
 .upmenu {
-    position: fixed;
-    width: 100%;
+    position: absolute;
     height: 25px;
-    background-color: blue;
+    background-color: rgba(0, 38, 255, 0.808);
     top: 0;
-    left: 0;
+    left: 8px;
 }
 .end {
     position: absolute;
     background-color: red;
     height: 25px;
     width: 30px;
-    right: 0;
+    right: 16px;
     top: 0;
 }
 .cre {
@@ -59,7 +58,7 @@ textarea {
     bottom: 0;
     height: 30px;
     width: 100%;
-    background-color: blue;
+    background-color:rgba(0, 38, 255, 0.808);
   }
 .start {
     position: absolute;
@@ -90,3 +89,46 @@ iframe {
 li {
     list-style-type: none;
 }
+body {
+    color: white;
+}
+/* CALC */
+.padding {
+    padding-top: 200px;
+}
+    .wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 250px;
+    height: 300px;
+    background: url(fon.jpg);
+    border-radius: 10px;
+    border: 1px solid #949493;
+    box-shadow: 3px 3px 7px #000;
+    }
+    .main {
+    margin: 0 auto ;
+    margin-top: 5px;
+    width: 220px;
+    }
+    .display input {
+    background: #ccc;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 207px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 24px;
+    }
+    .buttons input {
+    background: url(button.jpg);
+    margin: 0 auto;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 24px;
+    }
+    .red {
+        background-color: red;
+    }

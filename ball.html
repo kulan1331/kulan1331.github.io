@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Document</title>
+<style>
+canvas {
+border: 5px solid rgba(0, 0, 0, 0.5);
+position: absolute;
+left: 350px;
+top: 30px;
+}
+</style>
+</head>
+<body>
+    <header>
+            <a href="./index.html"><div class="end cre"> ✕ </div></a>
+    </header>
+    <main>
+<canvas width="600" height="600" id="game"></canvas>
+<script>
+let ctx = game.getContext("2d")
+  
+let ball = {
+x: 0,
+y: 0,
+r: 10,
+vx: 8,
+vy: 8,
+}
+  
+let player = {
+x: 250,
+y: 300,
+w: 100, // Ширина
+h: 20, // Высота
+}
+  
+function redraw() {
+ctx.clearRect(0, 0, 800, 600)
+ctx.fillStyle = "#99aaff"
+ctx.beginPath()
+ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2)
+ctx.fill()
+ball.x += ball.vx
+ball.y += ball.vy
+  
+ctx.fillRect(player.x, player.y, player.w, player.h)
+  
+// Проверка столкновения
+if (ball.x > player.x && ball.x < player.x + player.w)
+if (ball.y + 15 > player.y && ball.y < player.y + player.h) {
+// Bom!
+ball.vy = -Math.abs(ball.vy)
+}
+  
+// Проверка столкновения со стенами
+if (ball.x < 0) ball.vx = Math.abs(ball.vx)
+if (ball.x > 600) ball.vx = -Math.abs(ball.vx)
+  
+if (ball.y < 0) ball.vy = Math.abs(ball.vy)
+if (ball.y > 600) ball.vy = -Math.abs(ball.vy)
+requestAnimationFrame(redraw)
+}
+function move(e) {
+if (e.keyCode == 39) {
+player.x += 10
+}
+if (e.keyCode == 37) {
+player.x -= 10
+}
+}
+  
+document.addEventListener("keydown", move)
+requestAnimationFrame(redraw)
+</script>
+</main>
+</body>
+</html>
