@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+    body {
+        background-color: rgb(31, 29, 29);
+    }
+    .greystraight {
+        position: absolute;
+        left: 0;
+        top: 25px;
+        background-color: grey;
+        height: 20px;
+        width: 100%;
+    }
+    .blueblock {
+        position: absolute;
+        left: 0;
+        top: 45px;
+        background-color: rgba(0, 38, 255, 0.808);
+        height: 60px;
+        width: 100%;
+    }
+    .grey {
+        position: absolute;
+        left: 320px;
+        top: 45%;
+        background-color: grey;
+        height: 20px;
+        width: 400px;
+    }
+    .blue {
+        position: absolute;
+        left: 0;
+        top: 105px;
+        width: 300px;
+        height: 610px;
+        background-color: rgba(0, 38, 255, 0.808);
+    }
+    .table1 {
+        position: absolute;
+        left: 320px;
+        top: 120px;
+    }
+    i {
+        font-size: 60px;
+        align-content: center;
+    }
+
+    p {
+        text-align: center;
+        font-weight: bolder;
+    }
+    td {
+        display: inline-block;  
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .one {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        width: 240px;
+        height: 450px;
+        background-color: rgba(30, 177, 245, 0.330);
+    }
+    li {
+        margin-left: 30px;
+        font-size: 120%;
+    }
+    </style>
+</head>
+<body>
+            <div class="upmenu"> Проводник
+                <a href="./index.html"><div class="end cre"> ✕ </div></a>    
+            </div>
+            <div class="greystraight">
+                <li> Файл   Правка  Вид  Избраное  Сервис  Справка </li>    
+            </div>
+            <div class="blueblock">
+                <div class="grey"> Путь: Рабочий стол </div>
+            </div>
+            <div class="blue">
+                <div class="one">
+                    <p>Избраное:</p>
+                    <li><a href="./edge.html">Wikipedia</a></li>
+                    <li><a href="./foto.html">Kitty.jpg</a></li>
+                    <li><a href="./calc.html">Калькулятор</a></li>
+                    <li><a href="./ball.html">Волшебный мячик</a></li>
+                    <li><a href="./notebook.html">Блокнот</a></li>
+                </div>
+            </div>
+            <table class="table1">
+                <td><a href="./edge.html"><i class="fab fa-wikipedia-w"></i><p>  Wikipedia</p></td>
+                <td> <a href="./notebook.html"><i class=" far fa-clipboard"></i> <p>Блокнот</p></td>
+                <td> <a href="./foto.html"> <i class="fas fa-image"></i> <p>Kitty.jpg</p></a></td>
+                <td> <a href="./calc.html"> <i class="fas fa-calculator"> </i> <p>Калькулятор</p></a></td>
+                <td> <a href="./ball.html"><i class="fas fa-bowling-ball"></i> <p>Волшебный мячик</p></a></td>
+            </table>
+</body>
+</html>
