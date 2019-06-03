@@ -26,10 +26,34 @@
               bottom: 30px;
               left: 0;
               margin: auto;
-              background:rgba(0, 38, 255, 0.808);
-              
+              background:rgba(0, 38, 255, 0.808); 
             }
             #zatemnenie:target {
+              display: block;
+            }
+            #zatemnenie1 {
+              background: rgba(102, 102, 102, 0.5);
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: none;
+            }
+            #okno1 {
+              width: 400px;
+              height: 500px;
+              text-align: left;
+              padding: 25px;
+              position: absolute;
+              left: 400px;
+              top: 70px;
+              margin: auto;
+              background:white; 
+              color: black;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            #zatemnenie1:target {
               display: block;
             }
             .close {
@@ -38,7 +62,26 @@
               bottom: 0;
               height: 1000px;
               width: 1000px;
-              </style>
+            }
+            .icon {
+              position: absolute;
+              bottom: 0;
+              left: 50px;
+            }
+            .nice {
+              font-size: 200%
+            }
+            .imag {
+              height: 50%;
+            }
+            .prokrutka {
+              width:400px; /* ширина нашего блока */
+              height:500px; /* высота нашего блока */
+              background: #fff; /* цвет фона, белый */
+              border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+              overflow: auto; /* свойство для прокрутки по горизонтали. Автоматом, если больше блока */
+              }
+          </style>
 </head>
 <body>
             <!--задний фон-->
@@ -50,6 +93,7 @@
     <a href="./notebook.html"><i class=" far fa-clipboard"></i></a>
     <a href="./edge.html"><i class="fab fa-wikipedia-w"></i></a>
     <a href="./ball.html"><i class="fas fa-bowling-ball"></i></a>
+    <a href="./second.html"> <img src="./snake.png" alt="snake"> </a>
     <div>
             <!--Иконки 2  ряд-->
             <div class="top">
@@ -57,6 +101,7 @@
             <a href="./calc.html"> <i class="fas fa-calculator"></i> </a>
             </div>
             <a href="./folder.html"><i class="fas fa-folder"></i></a>
+            <a href="#zatemnenie1"> <i class="fas fa-file-word"></i></a>
         </main>
             <footer>
                 <div class="mainmenu">
@@ -68,10 +113,181 @@
             <li> <a href="./notebook.html"><i class=" far fa-clipboard"></i>   Notepad</a></li>
             <li> <a href="./foto.html"><i class="fas fa-image"></i> kitty.jpg</a></li>
             <li> <a href="./calc.html"> <i class="fas fa-calculator"> </i>  Калькулятор</a></li> 
-            <li> <a href="./ball.html"><i class="fas fa-bowling-ball"></i> Волшебный мячик</a></li>
+            <li> <a href="./ball.html"><i class="fas fa-bowling-ball"></i> Игрулька</a></li>
+            <li><a href="#zatemnenie1"> <i class="fas fa-file-word"></i> Конспеты по WEB</a></li>
+            <li class="imag"><a href="./second.html"> <img src="./snake.png" alt="snake"> Змейка </a></li>
+
             <a href="./index.html " class="close"></a> 
           </div>
         </div>
+        <div class="icon nice">
+            <a href="./folder.html"><i class="fas fa-folder icon"></i></a>
+        </div>
+        <div id="zatemnenie1">
+            <div id="okno1" class="prokrutka">
+                CSS - язык описания внешнего вида документа <br>
+
+                  селектор { <br>
+                      свойство: значение;<br>
+                  …<br>
+                      свойство: значение;<br>
+                  }<br>
+                  
+                  
+                  color - цвет текста<br>
+                  background-color - цвет заднего фона <br>
+                  font-size - размер шрифта<br>
+                  font-family - семейство шрифтов<br>
+                  text-align - выравнивание по горизонтали<br>
+                  font-style - курсивное/наклоненное/обычное начертание<br>
+                  font-weight - насыщенность начертания/толщина<br>
+                  text-decoration - подчёркивание/зачеркивание/надчеркивание<br>
+                  text-shadow - тень текста<br>
+                  letter-spacing - расстояние между буквами<br>
+                  mine-height - высота строки <br>
+                  <br>
+                  color: #859437<br>
+                  <br>
+                  text-decoration: none;<br>
+                  text-decoration: underline/overline<br>
+                  text-decoration: line-through - зачеркивает<br>
+                  text-shadow: 1px 1px 2px black; - записывать не обязательно <br>
+                  <br>
+                  letter-spacing: 3px;<br>
+                  letter-spacing: 3rem;<br>
+                  <br>
+                  line-height: 1.5;<br>
+                  line-height: 3rem;<br>
+                  line-height: normal;<br>
+                  <br>
+                  <p class="und">ЭТОТ ТЕКСТ БУДЕТ ПОДЧЕРКНУТЫМ</p> <br>
+                  . und{ text-decoration: ungerline;<br>
+                    <br>
+                  width - высота<br>
+                  height - высота<br>
+                  em - % - rem - vw - vh (относительные)<br>
+                  cm - inch - pt - mm (абсолютные - нужны для печати)<br>
+                  <br>
+                  Высота блочных элементов стремится к нулю, а ширина - занять все доступное пространство<br>
+                  проценты берутся от размеров родительского элемента<br>
+                  (ширина - от ширины, высота - от высоты, если высота явно указана)<br>
+                  <br>
+                  расстояние между двумя блоками равно большему по модулю margin<br>
+                  <br>
+                  margin переходит от внутреннего элемента к внешнему <br>
+                  (если у внешнего нет padding/border/overflow)<br>
+                  <br>
+                  1. Для всех сторон:<br>
+                    margin: 30px;<br>
+                    padding:40px;<br>
+                    <br>
+                  2. Сверху-снизу спраа-слева:<br>
+                    margin:10px 40px;<br>
+                    padding:30px 20px;<br>
+                    <br>
+                  3. Сверху справа-слева снизу:<br>
+                    margin:40px 30px 10px;<br>
+                    padding:20px 30px 0;<br>
+                    <br>
+                  4. Сверху справа снизу слева:<br>
+                    margin:20px 40px 30px 5%;<br>
+                    padding:2px 5px 8% 10%;<br>
+                  
+                  
+                  Значение margin и padding записывается по часовой стрелке, начиная с верхнего<br>
+                  Если значение для какого-нибудь из отступов явно не задано, оно берется равным отступу с противоположной стороны<br>
+                  <br>
+                  Развернутая запись:<br>
+                    margin-top:10%;<br>
+                    margin-left:20px;<br>
+                    margin-right:40px;<br>
+                    margin-bottom:2%;<br>
+                    <br>
+                  Значение auto<br>
+                  0 для top и bottom<br>
+                  right и left - все свободное пространство<br>
+                  <br>
+                  правила схлопования margin действует только когда блоки идут вертикально<br>
+                  vertical-align - выравнивание по вертикали <br>
+                  vrtical-align:top; - выравнивание по верхему краю<br>
+                  verticl-align:bottom; - выравнивание по нижнему краю<br>
+                  <br>
+                  координаты элемента <br>
+                  left - отсчет слева<br>
+                  right - отсчет справа<br>
+                  top - отсчет сверху<br>
+                  bottom - отсчет снизу<br>
+                  <br>
+                  position:absolute;<br>
+                  -Позиции вычисляются относительно ближайшего спозиционированного предка<br>
+                  -Элемент извлекается из потока. Его место занимает следущий.<br>
+                  <br>
+                  position:fixed;<br>
+                  -Элемент теряет место в потоке<br>
+                  -Коорднаты отсчитываются относительно окна браузера<br>
+                  Остается на месте при прокрутке<br>
+                  <br>
+                  Сплошная рамка:border: <br>
+                  2px solig rgba<br>
+                  <br>
+                  псевдокласс в CSS - КЛЮЧЕВОЕ СЛОВО ДОБАВЛЕННОЕ К СЕЛЕКТОРУ, КОТОРОЕ ОПРЕДЕЛЯЕТ<br>
+                  ЕГО ОСОБОЕ СОСТОЯНИЕ<br>
+                  Основные состояния:<br>
+                  1. На элемент наведен курсор<br>
+                  2.<br>
+                  3.<br>
+                  Псевдокласс имеет два основных правила:<br>
+                  - Является ключевым словом которое начинается с двоеточния<br>
+                  - Не может существовать сам по себе<br>
+                  <br>
+                  селектор:псевдокласс {}<br>
+                  Важно: между селектором и псевдоклассом нет пробела<br>
+                  <br>
+                  hover: определяет элемент, на который наведен курсор<br>
+                  active: определяет элемент в момент нажатой на нем кнопки мыши<br>
+                  visited: применим только к ссылкам. Определяет ссылку, по которой уже был совершен переход<br>
+                  transition: позваляет анимировать другие свойства для того или иного элемента при клике или наведении<br>
+                  <br>
+                  <br>
+                  animation - анимацция по ключевым кадрам<br>
+                  ключевые кадры @keyframes		<br>
+                  <br>
+                  @keyframes name {<br>
+                  from {<br>
+                  text-shadow: 0 0 3px black;<br>
+                  }<br>
+                  50% {<br>
+                  text-shadow: 0 0 6px black;<br>
+                  }<br>
+                  to {<br>
+                  text-shadow: 0 0 30px black;<br>
+                  }<br>
+                  }<br>
+                  from - первый кадр<br>
+                  50% - середина анимации<br>
+                  to - последний кадр<br>
+                  <br>
+                  .class {<br>
+                  animation: name duration timig-function delay<br>
+                  iterations direction;<br>
+                  }<br>
+                  name - имя анимации<br>
+                  duretion - длительность анимации<br>
+                  timing-function - "плавность" анимации - ease, ease-in, ease-out, ease-in-out<br>
+                  <br>
+                  direction<br>
+                  alternate от начала и до конца, потом обратно<br>
+                  alternate с канца до начала, потом обратно<br>
+                  normal c начала и до конца<br>
+                  reverse анимация проигрывание с конца<br>
+                  <br>
+                  vieport: видимая область страницы<br>
+                  сначала идут стили для мобильной версии
+
+                  <div class="upmenu"> Конспекты по WEB
+                      <a href="./index.html"><div class="end cre"> ✕ </div></a>    
+                  </div>
+          </div>
 </section>
 </body>
 </html>
